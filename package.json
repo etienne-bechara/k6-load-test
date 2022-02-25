@@ -1,0 +1,27 @@
+{
+  "name": "k6-load-test",
+  "version": "1.0.0",
+  "description": "K6 load testing in TypeScript",
+  "author": {
+    "name": "Etienne Bechara",
+    "email": "bechara.etienne@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/etienne-bechara/k6-load-test"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "rimraf ./dist && tsc && dotenv \"k6 run --out csv=result.csv ./dist/main.js\"",
+    "lint": "export TIMING=1 || set TIMING=1&& eslint **/*.ts --max-warnings=0"
+  },
+  "devDependencies": {
+    "@bechara/eslint-config-bechara-ts": "1.4.0",
+    "@types/k6": "0.36.0",
+    "@types/node": "17.0.21",
+    "dotenv-cli": "5.0.0",
+    "rimraf": "3.0.2",
+    "typescript": "4.5.5"
+  }
+}
