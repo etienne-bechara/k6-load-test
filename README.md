@@ -11,7 +11,8 @@ Download and [install](https://k6.io/docs/getting-started/installation/) K6 base
 Install Node.js dependencies for typings information:
 
 ```
-npm i
+npm i -g pnpm
+pnpm i
 ```
 
 ## Running
@@ -21,7 +22,7 @@ Modify `source/main.ts` to your liking, if you would like to use environment var
 Then run the built-in script:
 
 ```
-npm test
+pnpm test
 ```
 
 Results will be output in the console as well as in `result.csv` file.
